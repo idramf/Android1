@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,136 +7,347 @@
     android:orientation="vertical"
     tools:context=".ProductsActivity">
 
+    <TextView
+        android:id="@+id/choose_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        android:text="@string/select_text"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/choose_product">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button_product_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Isnereeeeee"
-                android:onClick="addProduct"/>
 
-            <Button
-                android:id="@+id/button_product_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 2" />
 
-            <Button
-                android:id="@+id/button_product_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 3" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/pc"
+                android:contentDescription="@string/desktop"
+                android:src="@drawable/a1_pc"/>
 
-            <Button
-                android:id="@+id/button_product_4"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 4" />
+                android:padding="35dp"
+                android:layout_toRightOf="@id/pc"
+                android:text="@string/desktop"/>
 
-            <Button
-                android:id="@+id/button_product_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 5" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/iphone"
+                android:src="@drawable/a2_tlf"
+                android:layout_below="@id/pc"/>
 
-            <Button
-                android:id="@+id/button_product_6"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 6" />
+                android:padding="35dp"
+                android:layout_below="@id/pc"
+                android:layout_toRightOf="@id/iphone"
+                android:text="iPhone xs"/>
 
-            <Button
-                android:id="@+id/button_product_7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 7" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/laptop"
+                android:src="@drawable/a3_laptop"
+                android:layout_below="@id/iphone"/>
 
-            <Button
-                android:id="@+id/button_product_8"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 8" />
+                android:padding="35dp"
+                android:layout_below="@id/iphone"
+                android:layout_toRightOf="@id/laptop"
+                android:text="Laptop Air 13,3"/>
 
-            <Button
-                android:id="@+id/button_product_9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 9" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/drone"
+                android:src="@drawable/a4_drone"
+                android:layout_below="@id/laptop"/>
 
-            <Button
-                android:id="@+id/button_product_10"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 10" />
+                android:padding="35dp"
+                android:layout_below="@id/laptop"
+                android:layout_toRightOf="@id/drone"
+                android:text="Mavic Air"/>
 
-            <Button
-                android:id="@+id/button_product_11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 11" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/film"
+                android:src="@drawable/a5_filme"
+                android:layout_below="@id/drone"/>
 
-            <Button
-                android:id="@+id/button_product_12"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 12" />
+                android:padding="35dp"
+                android:layout_below="@id/drone"
+                android:layout_toRightOf="@id/film"
+                android:text="Sony HXR-NX70"/>
 
-            <Button
-                android:id="@+id/button_product_13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 13" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/cam"
+                android:src="@drawable/a6_nikon"
+                android:layout_below="@id/film"/>
 
-            <Button
-                android:id="@+id/button_product_14"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 14" />
+                android:padding="35dp"
+                android:layout_below="@id/film"
+                android:layout_toRightOf="@id/cam"
+                android:text="Nikon Z6"/>
 
-            <Button
-                android:id="@+id/button_product_15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 15" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/gop"
+                android:src="@drawable/a7_gopro"
+                android:layout_below="@id/cam"/>
 
-            <Button
-                android:id="@+id/button_product_16"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 16" />
+                android:padding="35dp"
+                android:layout_below="@id/cam"
+                android:layout_toRightOf="@id/gop"
+                android:text="GoPro Hero 4"/>
 
-            <Button
-                android:id="@+id/button_product_17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 17" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/watch"
+                android:src="@drawable/a8_watch"
+                android:layout_below="@id/gop"/>
 
-            <Button
-                android:id="@+id/button_product_18"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 18" />
+                android:padding="35dp"
+                android:layout_below="@id/gop"
+                android:layout_toRightOf="@id/watch"
+                android:text="Apple Watch Series 4"/>
 
-            <Button
-                android:id="@+id/button_product_19"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Product 19" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/tv"
+                android:src="@drawable/a9_tv"
+                android:layout_below="@id/watch"/>
 
-            <Button
-                android:id="@+id/button_product_20"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product 20" />
-        </LinearLayout>
+                android:padding="35dp"
+                android:layout_below="@id/watch"
+                android:layout_toRightOf="@id/tv"
+                android:text="Samsung QLED Q9F"/>
+
+            <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="@dimen/fab_margin"
+            android:id="@+id/blu"
+            android:src="@drawable/a10_bluray"
+            android:layout_below="@id/tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/tv"
+                android:layout_toRightOf="@id/blu"
+                android:text="Blu-ray Player curvo con 3D J5700"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/min"
+                android:src="@drawable/a11_minadora"
+                android:layout_below="@id/blu"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/blu"
+                android:layout_toRightOf="@id/min"
+                android:text="Bitmain Antminer S9 (14Th)"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/wallet"
+                android:src="@drawable/a12_wallet"
+                android:layout_below="@id/min"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/min"
+                android:layout_toRightOf="@id/wallet"
+                android:text="TREZOR, Hardware Wallet "/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/tablet"
+                android:src="@drawable/a13_tablet"
+                android:layout_below="@id/wallet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/wallet"
+                android:layout_toRightOf="@id/tablet"
+                android:text="Samsung Galaxy Tab S4"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/s9"
+                android:src="@drawable/a14_s9"
+                android:layout_below="@id/tablet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/tablet"
+                android:layout_toRightOf="@id/s9"
+                android:text="Samsung Galaxy S9"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/audi"
+                android:src="@drawable/a15_audi"
+                android:layout_below="@id/s9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/s9"
+                android:layout_toRightOf="@id/audi"
+                android:text="Audífonos MDR-Z7"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/ps"
+                android:src="@drawable/a16_ps"
+                android:layout_below="@id/audi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/audi"
+                android:layout_toRightOf="@id/ps"
+                android:text="This Limited Edition Marvel’s Spider-Man PS4™ Pro"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/xbox"
+                android:src="@drawable/a17_xbox"
+                android:layout_below="@id/ps"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/ps"
+                android:layout_toRightOf="@id/xbox"
+                android:text="Xbox wireless control"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/corneta"
+                android:src="@drawable/a18_corneta"
+                android:layout_below="@id/xbox"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/xbox"
+                android:layout_toRightOf="@id/corneta"
+                android:text="Aperion Allaire"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/mouse"
+                android:src="@drawable/a19_mouse"
+                android:layout_below="@id/corneta"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/corneta"
+                android:layout_toRightOf="@id/mouse"
+                android:text="Logitech G PRO"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/power"
+                android:src="@drawable/a20_power"
+                android:layout_below="@id/mouse"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_below="@id/mouse"
+                android:layout_toRightOf="@id/power"
+                android:text="Xiaomi Powerbank 2C"/>
+
+        </RelativeLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

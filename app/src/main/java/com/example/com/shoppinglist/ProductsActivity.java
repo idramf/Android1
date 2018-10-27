@@ -18,10 +18,10 @@ public class ProductsActivity extends AppCompatActivity {
     public void addProduct(View view) {
 
         Button button;
-        button = (Button) findViewById(R.id.button);
+        //button = (Button) findViewById(R.id.button);
         Intent intent = new Intent(this, MainActivity.class);
-        String message = button.getText().toString();
-        intent.putExtra("EXTRA_MESSAGE", message);
+        //String message = button.getText().toString();
+        //intent.putExtra("EXTRA_MESSAGE", message);
         finish();
 
     }

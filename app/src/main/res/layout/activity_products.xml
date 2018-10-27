@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProductsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_product_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 1"
+                android:onClick="addProduct"/>
+
+            <Button
+                android:id="@+id/button_product_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 2" />
+
+            <Button
+                android:id="@+id/button_product_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 3" />
+
+            <Button
+                android:id="@+id/button_product_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 4" />
+
+            <Button
+                android:id="@+id/button_product_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 5" />
+
+            <Button
+                android:id="@+id/button_product_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 6" />
+
+            <Button
+                android:id="@+id/button_product_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 7" />
+
+            <Button
+                android:id="@+id/button_product_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 8" />
+
+            <Button
+                android:id="@+id/button_product_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 9" />
+
+            <Button
+                android:id="@+id/button_product_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 10" />
+
+            <Button
+                android:id="@+id/button_product_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 11" />
+
+            <Button
+                android:id="@+id/button_product_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 12" />
+
+            <Button
+                android:id="@+id/button_product_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 13" />
+
+            <Button
+                android:id="@+id/button_product_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 14" />
+
+            <Button
+                android:id="@+id/button_product_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 15" />
+
+            <Button
+                android:id="@+id/button_product_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 16" />
+
+            <Button
+                android:id="@+id/button_product_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 17" />
+
+            <Button
+                android:id="@+id/button_product_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 18" />
+
+            <Button
+                android:id="@+id/button_product_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 19" />
+
+            <Button
+                android:id="@+id/button_product_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product 20" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

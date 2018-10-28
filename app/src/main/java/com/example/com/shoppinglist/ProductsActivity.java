@@ -1,6 +1,8 @@
 package com.example.com.shoppinglist;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +25,20 @@ public class ProductsActivity extends AppCompatActivity {
         //String message = button.getText().toString();
         //intent.putExtra("EXTRA_MESSAGE", message);
         //finish();
+    }
 
+    //*Al tocar el nombre del producto aparece una pequeña descripcion**//
+    public void onClickShowAlert (View view){
+        AlertDialog.Builder alerta = new AlertDialog.Builder(ProductsActivity.this);
+        //Titulo de la alerta
+        alerta.setTitle("Description");
+        //Descripcion de la alerta
+        alerta.setMessage("Buuuuuueno, esto va a mejorar");
+        //Agregamos en boton ok
+        alerta.setPositiveButton("Ok", new DialogInterface.OnClickListener(){
+            public void onClick (DialogInterface dialog, int which){
+            }
+        });
+        alerta.show();
     }
 }

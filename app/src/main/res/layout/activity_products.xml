@@ -43,7 +43,7 @@
                 android:padding="35dp"
                 android:layout_toRightOf="@id/pc"
                 android:text="@string/desktop"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert1"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -61,7 +61,7 @@
                 android:layout_below="@id/pc"
                 android:layout_toRightOf="@id/iphone"
                 android:text="iPhone xs"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert2"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -79,7 +79,7 @@
                 android:layout_below="@id/iphone"
                 android:layout_toRightOf="@id/laptop"
                 android:text="Laptop Air 13,3"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert3"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -97,7 +97,7 @@
                 android:layout_below="@id/laptop"
                 android:layout_toRightOf="@id/drone"
                 android:text="Mavic Air"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert4"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -115,7 +115,7 @@
                 android:layout_below="@id/drone"
                 android:layout_toRightOf="@id/film"
                 android:text="Sony HXR-NX70"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert5"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -133,7 +133,7 @@
                 android:layout_below="@id/film"
                 android:layout_toRightOf="@id/cam"
                 android:text="Nikon Z6"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert6"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -151,7 +151,7 @@
                 android:layout_below="@id/cam"
                 android:layout_toRightOf="@id/gop"
                 android:text="GoPro Hero 4"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert7"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -169,7 +169,7 @@
                 android:layout_below="@id/gop"
                 android:layout_toRightOf="@id/watch"
                 android:text="Apple Watch Series 4"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert8"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -187,7 +187,7 @@
                 android:layout_below="@id/watch"
                 android:layout_toRightOf="@id/tv"
                 android:text="Samsung QLED Q9F"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert9"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -205,7 +205,7 @@
                 android:layout_below="@id/tv"
                 android:layout_toRightOf="@id/blu"
                 android:text="Blu-ray Player curvo con 3D J5700"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert10"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -223,7 +223,7 @@
                 android:layout_below="@id/blu"
                 android:layout_toRightOf="@id/min"
                 android:text="Bitmain Antminer S9 (14Th)"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert11"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -241,7 +241,7 @@
                 android:layout_below="@id/min"
                 android:layout_toRightOf="@id/wallet"
                 android:text="TREZOR, Hardware Wallet "
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert12"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -259,7 +259,7 @@
                 android:layout_below="@id/wallet"
                 android:layout_toRightOf="@id/tablet"
                 android:text="Samsung Galaxy Tab S4"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert13"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -277,7 +277,7 @@
                 android:layout_below="@id/tablet"
                 android:layout_toRightOf="@id/snueve"
                 android:text="Samsung Galaxy S9"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert14"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -295,7 +295,7 @@
                 android:layout_below="@id/snueve"
                 android:layout_toRightOf="@id/audi"
                 android:text="Audífonos MDR-Z7"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert15"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -313,7 +313,7 @@
                 android:layout_below="@id/audi"
                 android:layout_toRightOf="@id/ps"
                 android:text="This Limited Edition Marvel’s Spider-Man PS4™ Pro"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert16"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -331,7 +331,7 @@
                 android:layout_below="@id/ps"
                 android:layout_toRightOf="@id/xbox"
                 android:text="Xbox wireless control"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert17"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -349,7 +349,7 @@
                 android:layout_below="@id/xbox"
                 android:layout_toRightOf="@id/corneta"
                 android:text="Aperion Allaire"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert18"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -367,7 +367,7 @@
                 android:layout_below="@id/corneta"
                 android:layout_toRightOf="@id/mouse"
                 android:text="Logitech G PRO"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert19"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -385,7 +385,7 @@
                 android:layout_below="@id/mouse"
                 android:layout_toRightOf="@id/power"
                 android:text="Xiaomi Powerbank 2C"
-                android:onClick="onClickShowAlert"/>
+                android:onClick="onClickShowAlert20"/>
 
         </RelativeLayout>
     </ScrollView>

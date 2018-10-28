@@ -172,12 +172,12 @@
                 android:text="Samsung QLED Q9F"/>
 
             <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="@dimen/fab_margin"
-            android:id="@+id/blu"
-            android:src="@drawable/a10_bluray"
-            android:layout_below="@id/tv"/>
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/blu"
+                android:src="@drawable/a10_bluray"
+                android:layout_below="@id/tv"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -239,7 +239,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
-                android:id="@+id/s9"
+                android:id="@+id/snueve"
                 android:src="@drawable/a14_s9"
                 android:layout_below="@id/tablet"/>
 
@@ -248,7 +248,7 @@
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/tablet"
-                android:layout_toRightOf="@id/s9"
+                android:layout_toRightOf="@id/snueve"
                 android:text="Samsung Galaxy S9"/>
 
             <ImageView
@@ -257,13 +257,13 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/audi"
                 android:src="@drawable/a15_audi"
-                android:layout_below="@id/s9"/>
+                android:layout_below="@id/snueve"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
-                android:layout_below="@id/s9"
+                android:layout_below="@id/snueve"
                 android:layout_toRightOf="@id/audi"
                 android:text="Audífonos MDR-Z7"/>
 

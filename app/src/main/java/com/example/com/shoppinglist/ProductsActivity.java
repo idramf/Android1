@@ -14,15 +14,15 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
     }
 
-
+    //* Al tocar alguna imagen se cambia a la vista de los productos (activity_main)*//
     public void addProduct(View view) {
-
-        Button button;
+        //Button button;
         //button = (Button) findViewById(R.id.button);
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         //String message = button.getText().toString();
         //intent.putExtra("EXTRA_MESSAGE", message);
-        finish();
+        //finish();
 
     }
 }

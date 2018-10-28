@@ -34,7 +34,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/pc"
                 android:contentDescription="@string/desktop"
-                android:src="@drawable/a1_pc"/>
+                android:src="@drawable/a1_pc"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,7 +50,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/iphone"
                 android:src="@drawable/a2_tlf"
-                android:layout_below="@id/pc"/>
+                android:layout_below="@id/pc"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +67,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/laptop"
                 android:src="@drawable/a3_laptop"
-                android:layout_below="@id/iphone"/>
+                android:layout_below="@id/iphone"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +84,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/drone"
                 android:src="@drawable/a4_drone"
-                android:layout_below="@id/laptop"/>
+                android:layout_below="@id/laptop"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,7 +101,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/film"
                 android:src="@drawable/a5_filme"
-                android:layout_below="@id/drone"/>
+                android:layout_below="@id/drone"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -113,7 +118,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/cam"
                 android:src="@drawable/a6_nikon"
-                android:layout_below="@id/film"/>
+                android:layout_below="@id/film"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,7 +135,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/gop"
                 android:src="@drawable/a7_gopro"
-                android:layout_below="@id/cam"/>
+                android:layout_below="@id/cam"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,7 +152,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/watch"
                 android:src="@drawable/a8_watch"
-                android:layout_below="@id/gop"/>
+                android:layout_below="@id/gop"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,7 +169,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/tv"
                 android:src="@drawable/a9_tv"
-                android:layout_below="@id/watch"/>
+                android:layout_below="@id/watch"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -177,7 +186,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/blu"
                 android:src="@drawable/a10_bluray"
-                android:layout_below="@id/tv"/>
+                android:layout_below="@id/tv"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -193,7 +203,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/min"
                 android:src="@drawable/a11_minadora"
-                android:layout_below="@id/blu"/>
+                android:layout_below="@id/blu"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -209,7 +220,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/wallet"
                 android:src="@drawable/a12_wallet"
-                android:layout_below="@id/min"/>
+                android:layout_below="@id/min"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -225,7 +237,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/tablet"
                 android:src="@drawable/a13_tablet"
-                android:layout_below="@id/wallet"/>
+                android:layout_below="@id/wallet"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -241,7 +254,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/snueve"
                 android:src="@drawable/a14_s9"
-                android:layout_below="@id/tablet"/>
+                android:layout_below="@id/tablet"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -257,7 +271,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/audi"
                 android:src="@drawable/a15_audi"
-                android:layout_below="@id/snueve"/>
+                android:layout_below="@id/snueve"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -273,7 +288,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/ps"
                 android:src="@drawable/a16_ps"
-                android:layout_below="@id/audi"/>
+                android:layout_below="@id/audi"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -289,7 +305,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/xbox"
                 android:src="@drawable/a17_xbox"
-                android:layout_below="@id/ps"/>
+                android:layout_below="@id/ps"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -305,7 +322,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/corneta"
                 android:src="@drawable/a18_corneta"
-                android:layout_below="@id/xbox"/>
+                android:layout_below="@id/xbox"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -321,7 +339,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/mouse"
                 android:src="@drawable/a19_mouse"
-                android:layout_below="@id/corneta"/>
+                android:layout_below="@id/corneta"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -337,7 +356,8 @@
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/power"
                 android:src="@drawable/a20_power"
-                android:layout_below="@id/mouse"/>
+                android:layout_below="@id/mouse"
+                android:onClick="addProduct"/>
 
             <TextView
                 android:layout_width="wrap_content"

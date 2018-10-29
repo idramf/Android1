@@ -38,7 +38,7 @@
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_toRightOf="@id/pc"
@@ -50,161 +50,170 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/iphone"
+                android:contentDescription="@string/iphone"
                 android:src="@drawable/a2_tlf"
                 android:layout_below="@id/pc"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/pc"
                 android:layout_toRightOf="@id/iphone"
-                android:text="iPhone xs"
-                android:onClick="onClickShowAlert2"/>
+                android:onClick="onClickShowAlert2"
+                android:padding="35dp"
+                android:text="@string/iphone" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/laptop"
+                android:contentDescription="@string/laptop"
                 android:src="@drawable/a3_laptop"
                 android:layout_below="@id/iphone"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/iphone"
                 android:layout_toRightOf="@id/laptop"
-                android:text="Laptop Air 13,3"
-                android:onClick="onClickShowAlert3"/>
+                android:onClick="onClickShowAlert3"
+                android:padding="35dp"
+                android:text="@string/laptop" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/drone"
+                android:contentDescription="@string/drone"
                 android:src="@drawable/a4_drone"
                 android:layout_below="@id/laptop"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/laptop"
                 android:layout_toRightOf="@id/drone"
-                android:text="Mavic Air"
-                android:onClick="onClickShowAlert4"/>
+                android:onClick="onClickShowAlert4"
+                android:padding="35dp"
+                android:text="@string/drone" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/film"
+                android:contentDescription="@string/film"
                 android:src="@drawable/a5_filme"
                 android:layout_below="@id/drone"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/drone"
                 android:layout_toRightOf="@id/film"
-                android:text="Sony HXR-NX70"
-                android:onClick="onClickShowAlert5"/>
+                android:onClick="onClickShowAlert5"
+                android:padding="35dp"
+                android:text="@string/film" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/cam"
+                android:contentDescription="@string/cam"
                 android:src="@drawable/a6_nikon"
                 android:layout_below="@id/film"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/film"
                 android:layout_toRightOf="@id/cam"
-                android:text="Nikon Z6"
-                android:onClick="onClickShowAlert6"/>
+                android:onClick="onClickShowAlert6"
+                android:padding="35dp"
+                android:text="@string/cam" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/gop"
+                android:contentDescription="@string/gop"
                 android:src="@drawable/a7_gopro"
                 android:layout_below="@id/cam"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/cam"
                 android:layout_toRightOf="@id/gop"
-                android:text="GoPro Hero 4"
-                android:onClick="onClickShowAlert7"/>
+                android:onClick="onClickShowAlert7"
+                android:padding="35dp"
+                android:text="@string/gop" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/watch"
+                android:contentDescription="@string/watch"
                 android:src="@drawable/a8_watch"
                 android:layout_below="@id/gop"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/gop"
                 android:layout_toRightOf="@id/watch"
-                android:text="Apple Watch Series 4"
-                android:onClick="onClickShowAlert8"/>
+                android:onClick="onClickShowAlert8"
+                android:padding="35dp"
+                android:text="@string/watch" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/tv"
+                android:contentDescription="@string/tv"
                 android:src="@drawable/a9_tv"
                 android:layout_below="@id/watch"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="35dp"
                 android:layout_below="@id/watch"
                 android:layout_toRightOf="@id/tv"
-                android:text="Samsung QLED Q9F"
-                android:onClick="onClickShowAlert9"/>
+                android:onClick="onClickShowAlert9"
+                android:padding="35dp"
+                android:text="@string/tv" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/blu"
+                android:contentDescription="@string/bluray"
                 android:src="@drawable/a10_bluray"
                 android:layout_below="@id/tv"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/tv"
                 android:layout_toRightOf="@id/blu"
-                android:text="Blu-ray Player curvo con 3D J5700"
+                android:text="@string/bluray"
                 android:onClick="onClickShowAlert10"/>
 
             <ImageView
@@ -212,17 +221,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/min"
+                android:contentDescription="@string/min"
                 android:src="@drawable/a11_minadora"
                 android:layout_below="@id/blu"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/blu"
                 android:layout_toRightOf="@id/min"
-                android:text="Bitmain Antminer S9 (14Th)"
+                android:text="@string/min"
                 android:onClick="onClickShowAlert11"/>
 
             <ImageView
@@ -230,17 +240,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/wallet"
+                android:contentDescription="@string/wallet"
                 android:src="@drawable/a12_wallet"
                 android:layout_below="@id/min"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/min"
                 android:layout_toRightOf="@id/wallet"
-                android:text="TREZOR, Hardware Wallet "
+                android:text="@string/wallet"
                 android:onClick="onClickShowAlert12"/>
 
             <ImageView
@@ -248,17 +259,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/tablet"
+                android:contentDescription="@string/tablet"
                 android:src="@drawable/a13_tablet"
                 android:layout_below="@id/wallet"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/wallet"
                 android:layout_toRightOf="@id/tablet"
-                android:text="Samsung Galaxy Tab S4"
+                android:text="@string/tablet"
                 android:onClick="onClickShowAlert13"/>
 
             <ImageView
@@ -266,17 +278,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/snueve"
+                android:contentDescription="@string/s9"
                 android:src="@drawable/a14_s9"
                 android:layout_below="@id/tablet"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/tablet"
                 android:layout_toRightOf="@id/snueve"
-                android:text="Samsung Galaxy S9"
+                android:text="@string/s9"
                 android:onClick="onClickShowAlert14"/>
 
             <ImageView
@@ -284,17 +297,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/audi"
+                android:contentDescription="@string/audi"
                 android:src="@drawable/a15_audi"
                 android:layout_below="@id/snueve"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/snueve"
                 android:layout_toRightOf="@id/audi"
-                android:text="Audífonos MDR-Z7"
+                android:text="@string/audi"
                 android:onClick="onClickShowAlert15"/>
 
             <ImageView
@@ -302,17 +316,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/ps"
+                android:contentDescription="@string/ps"
                 android:src="@drawable/a16_ps"
                 android:layout_below="@id/audi"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/audi"
                 android:layout_toRightOf="@id/ps"
-                android:text="This Limited Edition Marvel’s Spider-Man PS4™ Pro"
+                android:text="@string/ps"
                 android:onClick="onClickShowAlert16"/>
 
             <ImageView
@@ -320,17 +335,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/xbox"
+                android:contentDescription="@string/xbox"
                 android:src="@drawable/a17_xbox"
                 android:layout_below="@id/ps"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/ps"
                 android:layout_toRightOf="@id/xbox"
-                android:text="Xbox wireless control"
+                android:text="@string/xbox"
                 android:onClick="onClickShowAlert17"/>
 
             <ImageView
@@ -338,17 +354,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/corneta"
+                android:contentDescription="@string/corneta"
                 android:src="@drawable/a18_corneta"
                 android:layout_below="@id/xbox"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/xbox"
                 android:layout_toRightOf="@id/corneta"
-                android:text="Aperion Allaire"
+                android:text="@string/corneta"
                 android:onClick="onClickShowAlert18"/>
 
             <ImageView
@@ -356,17 +373,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/mouse"
+                android:contentDescription="@string/mouse"
                 android:src="@drawable/a19_mouse"
                 android:layout_below="@id/corneta"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/corneta"
                 android:layout_toRightOf="@id/mouse"
-                android:text="Logitech G PRO"
+                android:text="@string/mouse"
                 android:onClick="onClickShowAlert19"/>
 
             <ImageView
@@ -374,17 +392,18 @@
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/power"
+                android:contentDescription="@string/power"
                 android:src="@drawable/a20_power"
                 android:layout_below="@id/mouse"
                 android:onClick="addProduct"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
                 android:layout_below="@id/mouse"
                 android:layout_toRightOf="@id/power"
-                android:text="Xiaomi Powerbank 2C"
+                android:text="@string/power"
                 android:onClick="onClickShowAlert20"/>
 
         </RelativeLayout>

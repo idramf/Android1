@@ -2,13 +2,20 @@ package com.example.com.shoppinglist;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.ByteArrayOutputStream;
 
 public class ProductsActivity extends AppCompatActivity {
 
@@ -18,21 +25,27 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
     }
 
+
     /** Al tocar alguna imagen se cambia a la vista de los productos (activity_main)
      * @param view
      */
     public void addProduct(View view) {
         //Button button;
-        //button = (Button) findViewById(R.id.button);
+        //int id = view.getId();
+        ImageView imageView = (ImageView) view;
+        BitmapDrawable bmdp = (BitmapDrawable) imageView.getDrawable();
+        Bitmap bmp = bmdp.getBitmap();
+        ByteArrayOutputStream bs = new ByteArrayOutputStream();
+        bmp.compress (Bitmap.CompressFormat.PNG, 50, bs);
+
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("array imagen", bs.toByteArray());
+        intent.putExtra("descripción del producto", view.getContentDescription().toString());
         startActivity(intent);
-        //String message = button.getText().toString();
-        //intent.putExtra("EXTRA_MESSAGE", message);
-        //finish();
     }
 
     /**Los siguientes procedimientos sirven para mostrar una pequeña descripcion
-    *del producto que se desea comprar, mostrando el titulo, la descripcion y un boton
+    * del producto que se desea comprar, mostrando el titulo, la descripcion y un boton
     * ok para volver a la vista con todos los productos
     */
     public void onClickShowAlert1 (View view){

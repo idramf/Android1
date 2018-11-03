@@ -34,8 +34,35 @@ public class MainActivity extends AppCompatActivity {
             String descripcion = extras.getString("descripción del producto");
 
             //createImageView(bmp, this);
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
             //createTextView(extras.getString("descripción del producto"), this);
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 
     @Override

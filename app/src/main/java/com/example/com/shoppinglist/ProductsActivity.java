@@ -25,7 +25,36 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
     }
 
+    /*@Override
+    protected void onStart() {
+        super.onStart();
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+*/
     /** Al tocar alguna imagen se cambia a la vista de los productos (activity_main)
      * @param view
      */

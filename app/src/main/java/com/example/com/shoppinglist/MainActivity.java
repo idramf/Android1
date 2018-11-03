@@ -1,39 +1,111 @@
 package com.example.com.shoppinglist;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.TestLooperManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    
+    public boolean LISTA_LLENA = false;
+    public List<Integer> textViewId = new ArrayList<>();
+    public List<Integer> imageViewId = new ArrayList<>();
 
-    private int CONTADOR_ID = 0;
-
+    /**
+     * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
+     * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
+     * a traves de un intent. 
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            Bundle extras = getIntent().getExtras();
+        //Verifica si la lista esta vacia y luego la llena
+        if (!this.LISTA_LLENA) {
+            llenarListaTextView();
+            llenarListaImageView();
+            this.LISTA_LLENA = true;
+        }
 
-            byte[] byteArray = extras.getByteArray("array imagen");
-            Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-            String descripcion = extras.getString("descripción del producto");
+        //RelativeLayout layout = (RelativeLayout)findViewById(R.id.relative_layout_2);
+        //Recepcion de informacion enviada a traves del intent
+        Bundle extras = getIntent().getExtras();
+        //Asignacion del array de imagen a un byteArray
+        byte[] byteArray = extras.getByteArray("array imagen");
+        //Transformacion del byteArray a imagen bmp
+        Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+        //Asignacion de la descripcion del producto a una variable
+        String descripcion = extras.getString("descripción del producto");
 
-            //createImageView(bmp, this);
+        //Creacion de variable que indica que la informacion no a sido asignada
+        boolean info_asignada = false;
+        //int prevTextViewId = 0;
+
+        asignarDescripcion(descripcion);
+
+        asignarImagen(bmp);
+    }
+
+    /**
+     * Recorre la lista donde estan almacenados los id's de los ImageView,
+     * busca el ImageView que tenga asignado el id seleccionado, verifica si el
+     * ImageView esta vacio y, si esta vacio, asigna la imagen enviada en el
+     * Intent al ImageView correspondiente, sino continua el ciclo "for" hasta
+     * que encuentre un ImageView vacio y asigne la imagen.
+     * @param bmp Imagen enviada
+     */
+    private void asignarImagen(Bitmap bmp) {
+
+        ImageView imageView;
+
+        for (int id: imageViewId) {
+
+            imageView = findViewById(id);
+
+            if (imageView.getDrawable() == null){
+
+                imageView.setImageBitmap(bmp);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Recorre la lista donde estan almacenados los id's de los TextView,
+     * busca el TextView que tenga asignado el id seleccionado, verifica si el
+     * TextView esta vacio y, si esta vacio, asigna la descripcion enviada en el
+     * Intent al TextView correspondiente, sino continua el ciclo "for" hasta
+     * que encuentre un TextView vacio y asigne la descripcion.
+     * @param descripcion Descripcion enviada
+     */
+    private void asignarDescripcion(String descripcion) {
+
+        TextView textView;
+
+        for (int id: textViewId) {
+
+            textView = findViewById(id);
+
+            if (textView.getText().toString().matches("")){
+
+                textView.setText(descripcion);
+                break;
+            }
+        }
+    }
+
     /**
      * Llena la lista imageViewId con cada uno de los id's de los ImageView existentes.
      */
@@ -71,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
     }
 
-            //createTextView(extras.getString("descripción del producto"), this);
     @Override
     protected void onStop() {
         super.onStop();
@@ -129,33 +200,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-/*    public void createTextView(String sText, Context con){
-        TextView textView = new TextView (con);
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-        layoutParams.addRule(RelativeLayout.RIGHT_OF, CONTADOR_ID);
-        layoutParams.addRule(RelativeLayout.END_OF, CONTADOR_ID);
-
-        textView.setId(CONTADOR_ID);
-        textView.setPadding(35, 35, 35, 35);
-        textView.setLayoutParams(layoutParams);
-        textView.setText(sText);
-
-    }*/
-
-/*    private void createImageView(Bitmap bmp, Context con) {
-        CONTADOR_ID = CONTADOR_ID +1;
-
-        RelativeLayout relativeLayout = new RelativeLayout(this);
-        relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
-
-        ImageView imageView = new ImageView(this);
-        imageView.setId(CONTADOR_ID);
-        imageView.setImageBitmap(bmp);
-        imageView.setLayoutParams(new RelativeLayout.LayoutParams(300, 300));
-        relativeLayout.addView(imageView);
-
-        setContentView(relativeLayout);
-
-    }*/
 }

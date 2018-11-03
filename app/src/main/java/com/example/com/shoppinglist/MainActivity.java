@@ -34,6 +34,38 @@ public class MainActivity extends AppCompatActivity {
             String descripcion = extras.getString("descripción del producto");
 
             //createImageView(bmp, this);
+    /**
+     * Llena la lista imageViewId con cada uno de los id's de los ImageView existentes.
+     */
+    private void llenarListaImageView() {
+        this.imageViewId.add(findViewById(R.id.image_product_1).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_2).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_3).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_4).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_5).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_6).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_7).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_8).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_9).getId());
+        this.imageViewId.add(findViewById(R.id.image_product_10).getId());
+    }
+
+    /**
+     * Llena la lista textViewId con cada uno de los id's de los TextView existentes.
+     */
+    private void llenarListaTextView() {
+        this.textViewId.add(findViewById(R.id.text_product_1).getId());
+        this.textViewId.add(findViewById(R.id.text_product_2).getId());
+        this.textViewId.add(findViewById(R.id.text_product_3).getId());
+        this.textViewId.add(findViewById(R.id.text_product_4).getId());
+        this.textViewId.add(findViewById(R.id.text_product_5).getId());
+        this.textViewId.add(findViewById(R.id.text_product_6).getId());
+        this.textViewId.add(findViewById(R.id.text_product_7).getId());
+        this.textViewId.add(findViewById(R.id.text_product_8).getId());
+        this.textViewId.add(findViewById(R.id.text_product_9).getId());
+        this.textViewId.add(findViewById(R.id.text_product_10).getId());
+    }
+
     @Override
     protected void onStart() {
         super.onStart();

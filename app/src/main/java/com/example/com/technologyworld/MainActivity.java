@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean LISTA_LLENA = false;
     public List<Integer> textViewId = new ArrayList<>();
     public List<Integer> imageViewId = new ArrayList<>();
-    List<ImageView> img = Singleton.getInstance().imageList;
-    List<TextView> txt = Singleton.getInstance().textList;
+    private List<Bitmap> img = Singleton.getInstance().imageList;
+    private List<String> txt = Singleton.getInstance().textList;
     /**
      * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
      * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
@@ -52,10 +52,13 @@ public class MainActivity extends AppCompatActivity {
         //Creacion de variable que indica que la informacion no a sido asignada
         boolean info_asignada = false;
         //int prevTextViewId = 0;
+        txt.add(descripcion);
+        img.add(bmp);
 
-        asignarDescripcion(descripcion);
+        asignarDescripcion(txt);
 
-        asignarImagen(bmp);
+        asignarImagen(img);
+
     }
 
     /**
@@ -66,19 +69,19 @@ public class MainActivity extends AppCompatActivity {
      * que encuentre un ImageView vacio y asigne la imagen.
      * @param bmp Imagen enviada
      */
-    private void asignarImagen(Bitmap bmp) {
+    private void asignarImagen(List<Bitmap> bmp) {
 
         ImageView imageView;
+        for (int i = 0; i < bmp.size(); i++) {
+            for (int id : imageViewId) {
 
-        for (int id: imageViewId) {
+                imageView = findViewById(id);
 
-            imageView = findViewById(id);
+                if (imageView.getDrawable() == null) {
 
-            if (imageView.getDrawable() == null){
-
-                imageView.setImageBitmap(bmp);
-                img.add(imageView);
-                break;
+                    imageView.setImageBitmap(bmp.get(i));
+                    break;
+                }
             }
         }
     }
@@ -91,19 +94,18 @@ public class MainActivity extends AppCompatActivity {
      * que encuentre un TextView vacio y asigne la descripcion.
      * @param descripcion Descripcion enviada
      */
-    private void asignarDescripcion(String descripcion) {
+    private void asignarDescripcion(List<String> descripcion) {
 
         TextView textView;
+        for (int i = 0; i <descripcion.size(); i++) {
+            for (int id : textViewId) {
 
-        for (int id: textViewId) {
+                textView = findViewById(id);
 
-            textView = findViewById(id);
-
-            if (textView.getText().toString().matches("")){
-
-                textView.setText(descripcion);
-                txt.add(textView);
-                break;
+                if (textView.getText().toString().matches("")) {
+                    textView.setText(descripcion.get(i));
+                    break;
+                }
             }
         }
     }
@@ -180,6 +182,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+
     }
 
     @Override

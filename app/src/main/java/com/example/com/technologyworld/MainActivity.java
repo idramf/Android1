@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean LISTA_LLENA = false;
     public List<Integer> textViewId = new ArrayList<>();
     public List<Integer> imageViewId = new ArrayList<>();
-
+    List<ImageView> img = Singleton.getInstance().imageList;
+    List<TextView> txt = Singleton.getInstance().textList;
     /**
      * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
      * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             if (imageView.getDrawable() == null){
 
                 imageView.setImageBitmap(bmp);
+                img.add(imageView);
                 break;
             }
         }
@@ -100,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             if (textView.getText().toString().matches("")){
 
                 textView.setText(descripcion);
+                txt.add(textView);
                 break;
             }
         }

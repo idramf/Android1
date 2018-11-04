@@ -1,4 +1,4 @@
-package com.example.com.shoppinglist;
+package com.example.com.technologyworld;
 
 import org.junit.Test;
 

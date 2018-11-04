@@ -1,9 +1,8 @@
-package com.example.com.shoppinglist;
+package com.example.com.technologyworld;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean LISTA_LLENA = false;
     public List<Integer> textViewId = new ArrayList<>();
     public List<Integer> imageViewId = new ArrayList<>();
-
+    private List<Bitmap> img = Singleton.getInstance().imageList;
+    private List<String> txt = Singleton.getInstance().textList;
     /**
      * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
      * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
@@ -45,67 +46,19 @@ public class MainActivity extends AppCompatActivity {
         byte[] byteArray = extras.getByteArray("array imagen");
         //Transformacion del byteArray a imagen bmp
         Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-
-        //ImageView imageView = null;
-        //imageView.setImageBitmap(bmp);
-        //img.add(imageView);
-
         //Asignacion de la descripcion del producto a una variable
         String descripcion = extras.getString("descripción del producto");
 
-        //TextView textView = null;
-        //textView.setText(descripcion);
-        //txt.add(textView);
-
         //Creacion de variable que indica que la informacion no a sido asignada
-        //boolean info_asignada = false;
+        boolean info_asignada = false;
         //int prevTextViewId = 0;
+        txt.add(descripcion);
+        img.add(bmp);
 
-        //restablecerTextViews();
+        asignarDescripcion(txt);
 
-        //restablecerImageViews();
+        asignarImagen(img);
 
-        asignarDescripcion(descripcion);
-
-        asignarImagen(bmp);
-    }
-
-    private void restablecerImageViews() {
-
-        ImageView imageView;
-
-        for (int id : imageViewId) {
-
-            for (ImageView savedImageView : img) {
-
-                imageView = findViewById(id);
-
-                if (imageView.getDrawable() == null) {
-
-                    imageView = savedImageView;
-                    break;
-                }
-            }
-        }
-    }
-
-    private void restablecerTextViews() {
-
-        TextView textView;
-
-        for (int id : textViewId) {
-
-            for (TextView savedTextView : txt) {
-
-                textView = findViewById(id);
-
-                if (textView.getText().toString().matches("")) {
-
-                    textView = savedTextView;
-                    break;
-                }
-            }
-        }
     }
 
     /**
@@ -116,18 +69,19 @@ public class MainActivity extends AppCompatActivity {
      * que encuentre un ImageView vacio y asigne la imagen.
      * @param bmp Imagen enviada
      */
-    private void asignarImagen(Bitmap bmp) {
+    private void asignarImagen(List<Bitmap> bmp) {
 
         ImageView imageView;
+        for (int i = 0; i < bmp.size(); i++) {
+            for (int id : imageViewId) {
 
-        for (int id: imageViewId) {
+                imageView = findViewById(id);
 
-            imageView = findViewById(id);
+                if (imageView.getDrawable() == null) {
 
-            if (imageView.getDrawable() == null){
-
-                imageView.setImageBitmap(bmp);
-                break;
+                    imageView.setImageBitmap(bmp.get(i));
+                    break;
+                }
             }
         }
     }
@@ -140,18 +94,18 @@ public class MainActivity extends AppCompatActivity {
      * que encuentre un TextView vacio y asigne la descripcion.
      * @param descripcion Descripcion enviada
      */
-    private void asignarDescripcion(String descripcion) {
+    private void asignarDescripcion(List<String> descripcion) {
 
         TextView textView;
+        for (int i = 0; i <descripcion.size(); i++) {
+            for (int id : textViewId) {
 
-        for (int id: textViewId) {
+                textView = findViewById(id);
 
-            textView = findViewById(id);
-
-            if (textView.getText().toString().matches("")){
-
-                textView.setText(descripcion);
-                break;
+                if (textView.getText().toString().matches("")) {
+                    textView.setText(descripcion.get(i));
+                    break;
+                }
             }
         }
     }
@@ -228,6 +182,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+
     }
 
     @Override

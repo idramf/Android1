@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,16 +45,67 @@ public class MainActivity extends AppCompatActivity {
         byte[] byteArray = extras.getByteArray("array imagen");
         //Transformacion del byteArray a imagen bmp
         Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        //ImageView imageView = null;
+        //imageView.setImageBitmap(bmp);
+        //img.add(imageView);
+
         //Asignacion de la descripcion del producto a una variable
         String descripcion = extras.getString("descripción del producto");
 
+        //TextView textView = null;
+        //textView.setText(descripcion);
+        //txt.add(textView);
+
         //Creacion de variable que indica que la informacion no a sido asignada
-        boolean info_asignada = false;
+        //boolean info_asignada = false;
         //int prevTextViewId = 0;
+
+        //restablecerTextViews();
+
+        //restablecerImageViews();
 
         asignarDescripcion(descripcion);
 
         asignarImagen(bmp);
+    }
+
+    private void restablecerImageViews() {
+
+        ImageView imageView;
+
+        for (int id : imageViewId) {
+
+            for (ImageView savedImageView : img) {
+
+                imageView = findViewById(id);
+
+                if (imageView.getDrawable() == null) {
+
+                    imageView = savedImageView;
+                    break;
+                }
+            }
+        }
+    }
+
+    private void restablecerTextViews() {
+
+        TextView textView;
+
+        for (int id : textViewId) {
+
+            for (TextView savedTextView : txt) {
+
+                textView = findViewById(id);
+
+                if (textView.getText().toString().matches("")) {
+
+                    textView = savedTextView;
+                    break;
+                }
+            }
+        }
     }
 
     /**

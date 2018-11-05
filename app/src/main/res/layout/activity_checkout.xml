@@ -16,14 +16,15 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="Checkout" />
+        android:text="Checkout"
+        android:padding="@dimen/fab_margin"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="380dp"
-        android:layout_below="@+id/checkout_text_view"
+        android:layout_below="@id/checkout_text_view"
         android:id="@+id/scroll_view2"
         android:layout_marginTop="5dp">
 

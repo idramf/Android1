@@ -46,4 +46,5 @@
     <string name="description_corneta">With Bluetooth connection, a digital optical input, an analog input, a subwoofer output and a USB port for charging devices. Price $ 700</string>
     <string name="description_mouse">It incorporates the latest generation of the HERO (High Efficiency Rated Optical) sensor for maximum speed, accuracy and responsiveness. Price $ 1200</string>
     <string name="description_power">Power de 5.1V / 2.4A, 9V / 2A, o 12V / 1.5A. Price $700</string>
+    <string name="button_checkout">Ir a revisión</string>
 </resources>

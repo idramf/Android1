@@ -19,12 +19,23 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@id/button_check"
         android:onClick="newProduct"
         android:text="@string/button_add_product"
+        app:layout_anchorGravity="bottom|center"
+        android:layout_toRightOf="@id/button_check" />
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:onClick="openCheckout"
+        android:text="Ir a revisión"
         app:layout_anchorGravity="bottom|center" />
 
 

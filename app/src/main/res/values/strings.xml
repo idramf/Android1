@@ -2,8 +2,8 @@
     <string name="app_name">Technology World</string>
     <string name="action_settings">Settings</string>
     <string name="select_text">Choose a product:</string>
-    <string name="desktop">DEL XPS 13</string>
-    <string name="iphone">iPhone xs</string>
+    <string name="desktop">DELL XPS 13</string>
+    <string name="iphone">iPhone XS</string>
     <string name="laptop">Laptop Air 13,3</string>
     <string name="drone">Mavic Air</string>
     <string name="film">Sony HXR-NX70</string>
@@ -25,4 +25,25 @@
     <string name="add_button">Agregar Artículo</string>
     <string name="selected_products">Selected products:</string>
     <string name="button_add_product">Add Product</string>
+    <string name="tittle_description">Description</string>
+    <string name="description_pc">Thickness 11.6 mm, weight 1.22 kilograms, 13.3-inch screen with three IPS panels, 1080p resolution, multitouch of 3840 x 2160 pixels. Price $ 2000</string>
+    <string name="description_phone">Height: 143.6 mm, Width: 70.9 mm, Thickness: 7.7 mm, Weight: 177 g, Water / dust resistance, Fingerprint reader, Colors: Space gray and silver. Price $ 1100</string>
+    <string name="description_laptop">Intel Core i5 microprocessor of eighth generation with 4 cores and capable of simultaneously processing 8 threads that works at a base clock frequency of 1.6 GHz. Price $ 2100</string>
+    <string name="description_drone">It can reach 70km / h and withstand winds of up to 35km / h and 4K camera. Price $ 800</string>
+    <string name="description_film">Sensor Exmor CMOS de 1/2,88p and 6,1, its 96 Gigabytes of integrated Flash memory provide up to 40 hours of storage. Price $ 1000</string>
+    <string name="description_camera">It offers a resolution of 45.7 megapixels, 493 focus points and an ISO window between 64 and 25600. Price $ 700</string>
+    <string name="description_gopro">Professional 4K30, 2.7K60 and 1080p120 video, 720p240 video for super slow-motion playback and 12MP photos at up to 30 frames per second. Price $ 700</string>
+    <string name="description_apple_watch">Boxes 40 mm. and 44 mm. Price $1000</string>
+    <string name="description_tv">It incorporates Direct Full Array technology, with LED mesh lighting across the entire surface of the panel instead of just on the sides. Price $ 3000</string>
+    <string name="description_bluray">Weight: 1Kg, HDMI Output: 1, Dimensions: 290x37x2. Price $ 5000</string>
+    <string name="description_miner">Released: November 2017 | Hashrate: 14Th / s | Consumption: 1372W | Noise: 85db | Algorithm: SHA-256. Price $ 2000</string>
+    <string name="description_wallet">Maximum security, Ease of use: works on Windows, OS X and Linux, Connect the supplied USB cable, modern cryptography, Powered by free community software. Price $ 800</string>
+    <string name="description_tablet">SCREEN: 10.5-inch Super AMOLED WQXGA 16:10, RESOLUTION: 2,560 pixels x 1,600 pixels, PROCESSOR: Qualcomm Snapdragon 835 Octa Core (4 x 2.35 Ghz + 4 x 1.9 Ghz), RAM: 4 GB RAM, MEMORY: 64 / 256 GB (up to 400 GB per microSD). Price $ 1000</string>
+    <string name="description_s9">It has a better positioned fingerprint reader, a very good camera with variable aperture, good performance, a beautiful design and now brings a double horn that offers a better sound experience. Price $ 1000</string>
+    <string name="description_headphones">Compatible with high resolution audio, 70 mm HD diaphragm unit with aluminum coated LCP, upgradeable cable and balanced audio support. Price $ 300</string>
+    <string name="description_ps4">This Limited Edition Marvel’s Spider-Man PS4™ Pro bundle includes a fully customized Amazing Red PS4 Pro console featuring the Spider icon, DUALSHOCK®4 wireless controller, Marvel’s Spider-Man game, and digital content. Precio $2000</string>
+    <string name="description_xbox">Compatible with: Xbox One X, Xbox One S, Xbox One, Windows 10. Price $500</string>
+    <string name="description_corneta">With Bluetooth connection, a digital optical input, an analog input, a subwoofer output and a USB port for charging devices. Price $ 700</string>
+    <string name="description_mouse">It incorporates the latest generation of the HERO (High Efficiency Rated Optical) sensor for maximum speed, accuracy and responsiveness. Price $ 1200</string>
+    <string name="description_power">Power de 5.1V / 2.4A, 9V / 2A, o 12V / 1.5A. Price $700</string>
 </resources>

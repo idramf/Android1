@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.com.technologyworld.CheckoutActivity">
+
+    <TextView
+        android:id="@+id/checkout_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Checkout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_below="@+id/checkout_text_view"
+        android:id="@+id/scroll_view2"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_1"
+                android:id="@+id/text_product_1"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:layout_below="@id/image_product_1"
+                android:id="@+id/image_product_2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_2"
+                android:layout_below="@id/image_product_1"
+                android:id="@+id/text_product_2"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_3"
+                android:layout_below="@id/image_product_2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_3"
+                android:layout_below="@id/image_product_2"
+                android:id="@+id/text_product_3"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_4"
+                android:layout_below="@id/image_product_3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_4"
+                android:layout_below="@id/image_product_3"
+                android:id="@+id/text_product_4"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_5"
+                android:layout_below="@id/image_product_4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_5"
+                android:layout_below="@id/image_product_4"
+                android:id="@+id/text_product_5"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_6"
+                android:layout_below="@id/image_product_5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_6"
+                android:layout_below="@id/image_product_5"
+                android:id="@+id/text_product_6"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_7"
+                android:layout_below="@id/image_product_6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_7"
+                android:layout_below="@id/image_product_6"
+                android:id="@+id/text_product_7"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_8"
+                android:layout_below="@id/image_product_7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_8"
+                android:layout_below="@id/image_product_7"
+                android:id="@+id/text_product_8"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_9"
+                android:layout_below="@id/image_product_8"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_9"
+                android:layout_below="@id/image_product_8"
+                android:id="@+id/text_product_9"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="@dimen/fab_margin"
+                android:id="@+id/image_product_10"
+                android:layout_below="@id/image_product_9"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                android:layout_toRightOf="@id/image_product_10"
+                android:layout_below="@id/image_product_9"
+                android:id="@+id/text_product_10"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_view2"
+        android:text="Total Productos: " />
+
+    <TextView
+        android:id="@+id/text_contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_view2"
+        android:layout_toEndOf="@+id/text_total"
+        android:text="0"
+        android:layout_toRightOf="@+id/text_total" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:onClick="returnCheck"
+        android:text="Volver" />
+</RelativeLayout>

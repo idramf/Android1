@@ -14,17 +14,26 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase se encarga del manejo de la Activity 1, la cual muestra la lista de productos
+ * seleccionados, asi como un botón para añadir mas productos y la opción de hacer la revisión
+ * final antes de realizar la compra.
+ * @author Isnere Hernández, Luis Machado y Sasha Stella
+ */
 public class MainActivity extends AppCompatActivity {
     
-    public boolean LISTA_LLENA = false;
-    public List<Integer> textViewId = new ArrayList<>();
-    public List<Integer> imageViewId = new ArrayList<>();
+    public boolean lista_ids_llena = false;
+    private List<Integer> textViewId = new ArrayList<>();
+    private List<Integer> imageViewId = new ArrayList<>();
     private List<Bitmap> img = Singleton.getInstance().imageList;
     private List<String> txt = Singleton.getInstance().textList;
+
     /**
      * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
      * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
-     * a traves de un intent. 
+     * a traves de un intent, donde la imagen es asignada a la variable "bmp" y la descripción del
+     * producto a la variable "descripcion"), seguidamente esta información se agrega a unas listas
+     * y finalmente es asignada a un ImageView y TextView para su visualización.
      * @param savedInstanceState
      */
     @Override
@@ -32,14 +41,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Verifica si la lista esta vacia y luego la llena
-        if (!this.LISTA_LLENA) {
+        //Verifica si la lista de los id's esta vacia y luego la llena
+        if (!this.lista_ids_llena) {
             llenarListaTextView();
             llenarListaImageView();
-            this.LISTA_LLENA = true;
+            this.lista_ids_llena = true;
         }
 
-        //RelativeLayout layout = (RelativeLayout)findViewById(R.id.relative_layout_2);
         //Recepcion de informacion enviada a traves del intent
         Bundle extras = getIntent().getExtras();
         //Asignacion del array de imagen a un byteArray
@@ -49,30 +57,28 @@ public class MainActivity extends AppCompatActivity {
         //Asignacion de la descripcion del producto a una variable
         String descripcion = extras.getString("descripción del producto");
 
-        //Creacion de variable que indica que la informacion no a sido asignada
-        boolean info_asignada = false;
-        //int prevTextViewId = 0;
         txt.add(descripcion);
         img.add(bmp);
 
         asignarDescripcion(txt);
-
         asignarImagen(img);
-
     }
 
     /**
-     * Recorre la lista donde estan almacenados los id's de los ImageView,
-     * busca el ImageView que tenga asignado el id seleccionado, verifica si el
-     * ImageView esta vacio y, si esta vacio, asigna la imagen enviada en el
-     * Intent al ImageView correspondiente, sino continua el ciclo "for" hasta
-     * que encuentre un ImageView vacio y asigne la imagen.
-     * @param bmp Imagen enviada
+     * Recorre la lista donde estan almacenadas las imagenes que se han enviado a la Activity.
+     * Teniendo una imagen seleccionada, recorre la lista donde estan almacenados los id's de los
+     * ImageViews, busca el ImageView que tenga asignado el id seleccionado, verifica si el
+     * ImageView esta vacio y, si esta vacio, asigna la imagen seleccionada y se termina el segundo
+     * ciclo "for", seguidamente se selecciona la siguiente imagen de la lista de imagenes y se
+     * repite lo anterior.
+     * @param bmp lista donde estan almacenadas las imagenes recibidas
      */
     private void asignarImagen(List<Bitmap> bmp) {
 
         ImageView imageView;
+
         for (int i = 0; i < bmp.size(); i++) {
+
             for (int id : imageViewId) {
 
                 imageView = findViewById(id);
@@ -87,17 +93,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Recorre la lista donde estan almacenados los id's de los TextView,
-     * busca el TextView que tenga asignado el id seleccionado, verifica si el
-     * TextView esta vacio y, si esta vacio, asigna la descripcion enviada en el
-     * Intent al TextView correspondiente, sino continua el ciclo "for" hasta
-     * que encuentre un TextView vacio y asigne la descripcion.
-     * @param descripcion Descripcion enviada
+     * Recorre la lista donde estan almacenadas las descripciones que se han enviado a la Activity.
+     * Teniendo una descripcion seleccionada, recorre la lista donde estan almacenados los id's de
+     * los TextViews, busca el TextView que tenga asignado el id seleccionado, verifica si el
+     * TextView esta vacio y, si esta vacio, asigna la descripcion seleccionada y se termina el
+     * segundo ciclo "for", seguidamente se selecciona la siguiente descripcion de la lista de
+     * descripciones y se repite lo anterior.
+     * @param descripcion lista donde estan almacenadas las descripciones recibidas
      */
     private void asignarDescripcion(List<String> descripcion) {
 
         TextView textView;
+
         for (int i = 0; i <descripcion.size(); i++) {
+
             for (int id : textViewId) {
 
                 textView = findViewById(id);
@@ -201,6 +210,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Inicia, a traves de un intent, la segunda Activity (donde se seleccionan los productos)
+     * @param view
+     */
     public void newProduct(View view) {
         Intent intent = new Intent(this, ProductsActivity.class);
         startActivity(intent);

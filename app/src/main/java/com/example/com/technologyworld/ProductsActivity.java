@@ -12,6 +12,13 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
+/**
+ * Esta clase se encarga del manejo de la Activity 2, la cual muestra la lista de productos que
+ * se pueden seleccionar. De estos productos se muestran la imagen y el nombre del producto; al
+ * hacer clic en el nombre aparecerá una ventana con la descripción del producto y su precio. Así
+ * mismo, al hacer clic en la imagen del producto, este se enviará a la pantalla principal.
+ * @author Isnere Hernández, Luis Machado y Sasha Stella
+ */
 public class ProductsActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +27,7 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
     }
 
-    /*@Override
+    @Override
     protected void onStart() {
         super.onStart();
     }
@@ -49,13 +56,16 @@ public class ProductsActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
     }
-*/
-    /** Al tocar alguna imagen se cambia a la vista de los productos (activity_main)
+
+    /** Al seleccionar la imagen del producto, esta es convertida a Bitmap y guardada en la variable
+     * "bmp" y seguidamente se convierte en un ByteArray y comprimida para s envio. Seguidamente se
+     * envia como un extra a traves de un intent con nombre clave "array imagen". Así mismo se envía
+     * la descripción de la imagen como un extra del intent con nombre clave "descripción del
+     * producto".
      * @param view
      */
     public void addProduct(View view) {
-        //Button button;
-        //int id = view.getId();
+
         ImageView imageView = (ImageView) view;
         BitmapDrawable bmdp = (BitmapDrawable) imageView.getDrawable();
         Bitmap bmp = bmdp.getBitmap();
@@ -68,9 +78,10 @@ public class ProductsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /**Los siguientes procedimientos sirven para mostrar una pequeña descripcion
-    * del producto que se desea comprar, mostrando el titulo, la descripcion y un boton
-    * ok para volver a la vista con todos los productos
+    /** Los siguientes procedimientos sirven para mostrar una pequeña descripcion del producto que
+     * se desea comprar, mostrando el titulo, la descripcion y un boton "ok" para volver a la vista
+     * con todos los productos.
+     * @param view
     */
     public void onClickShowAlert1 (View view){
         AlertDialog.Builder alerta = new AlertDialog.Builder(ProductsActivity.this);

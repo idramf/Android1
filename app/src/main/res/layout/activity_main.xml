@@ -5,20 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.com.technologyworld.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.com.technologyworld.MainActivity">
 
     <TextView
-        android:id="@+id/choose_product"
+        android:id="@+id/selected_products"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/fab_margin"
-        android:text="@string/select_text"
+        android:text="@string/selected_products"
         android:textStyle="bold"
         android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:onClick="newProduct"
+        android:text="@string/button_add_product"
+        app:layout_anchorGravity="bottom|center" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_below="@id/choose_product"
+        android:layout_below="@id/selected_products"
         android:id="@+id/scroll_view">
 
         <RelativeLayout
@@ -27,13 +40,13 @@
             android:orientation="vertical"
             android:id="@+id/relative_layout_2">
 
-            <ImageView
+           <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:padding="@dimen/fab_margin"
                 android:id="@+id/image_product_1"/>
 
-            <TextView
+             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="35dp"
@@ -177,35 +190,5 @@
 
         </RelativeLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/button_checkout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/scroll_view"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="openCheckout"
-        android:text="Ir a Revision"
-        app:layout_anchorGravity="bottom|center"
-        android:layout_marginRight="74dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/scroll_view"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="newProduct"
-        android:text="Agregar un producto"
-        app:layout_anchorGravity="bottom|center"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp" />
 
 </RelativeLayout>

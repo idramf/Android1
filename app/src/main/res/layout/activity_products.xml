@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProductsActivity">
+    tools:context="com.example.com.technologyworld.ProductsActivity">
 
     <TextView
         android:id="@+id/choose_product"
@@ -26,8 +26,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -43,6 +41,7 @@
                 android:padding="35dp"
                 android:layout_toRightOf="@id/pc"
                 android:text="@string/desktop"
+                android:contentDescription="@string/description_pc"
                 android:onClick="onClickShowAlert1"/>
 
             <ImageView
@@ -62,7 +61,8 @@
                 android:layout_toRightOf="@id/iphone"
                 android:onClick="onClickShowAlert2"
                 android:padding="35dp"
-                android:text="@string/iphone" />
+                android:text="@string/iphone"
+                android:contentDescription="@string/description_phone"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -81,7 +81,8 @@
                 android:layout_toRightOf="@id/laptop"
                 android:onClick="onClickShowAlert3"
                 android:padding="35dp"
-                android:text="@string/laptop" />
+                android:text="@string/laptop"
+                android:contentDescription="@string/description_laptop"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -100,7 +101,8 @@
                 android:layout_toRightOf="@id/drone"
                 android:onClick="onClickShowAlert4"
                 android:padding="35dp"
-                android:text="@string/drone" />
+                android:text="@string/drone"
+                android:contentDescription="@string/description_drone"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -119,7 +121,8 @@
                 android:layout_toRightOf="@id/film"
                 android:onClick="onClickShowAlert5"
                 android:padding="35dp"
-                android:text="@string/film" />
+                android:text="@string/film"
+                android:contentDescription="@string/description_film"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -138,7 +141,8 @@
                 android:layout_toRightOf="@id/cam"
                 android:onClick="onClickShowAlert6"
                 android:padding="35dp"
-                android:text="@string/cam" />
+                android:text="@string/cam"
+                android:contentDescription="@string/description_camera"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -157,7 +161,8 @@
                 android:layout_toRightOf="@id/gop"
                 android:onClick="onClickShowAlert7"
                 android:padding="35dp"
-                android:text="@string/gop" />
+                android:text="@string/gop"
+                android:contentDescription="@string/description_gopro"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -176,7 +181,8 @@
                 android:layout_toRightOf="@id/watch"
                 android:onClick="onClickShowAlert8"
                 android:padding="35dp"
-                android:text="@string/watch" />
+                android:text="@string/watch"
+                android:contentDescription="@string/description_apple_watch"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -195,7 +201,8 @@
                 android:layout_toRightOf="@id/tv"
                 android:onClick="onClickShowAlert9"
                 android:padding="35dp"
-                android:text="@string/tv" />
+                android:text="@string/tv"
+                android:contentDescription="@string/description_tv"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -214,7 +221,8 @@
                 android:layout_below="@id/tv"
                 android:layout_toRightOf="@id/blu"
                 android:text="@string/bluray"
-                android:onClick="onClickShowAlert10"/>
+                android:onClick="onClickShowAlert10"
+                android:contentDescription="@string/description_bluray"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -233,7 +241,8 @@
                 android:layout_below="@id/blu"
                 android:layout_toRightOf="@id/min"
                 android:text="@string/min"
-                android:onClick="onClickShowAlert11"/>
+                android:onClick="onClickShowAlert11"
+                android:contentDescription="@string/description_miner"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -252,7 +261,8 @@
                 android:layout_below="@id/min"
                 android:layout_toRightOf="@id/wallet"
                 android:text="@string/wallet"
-                android:onClick="onClickShowAlert12"/>
+                android:onClick="onClickShowAlert12"
+                android:contentDescription="@string/description_wallet"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -271,7 +281,8 @@
                 android:layout_below="@id/wallet"
                 android:layout_toRightOf="@id/tablet"
                 android:text="@string/tablet"
-                android:onClick="onClickShowAlert13"/>
+                android:onClick="onClickShowAlert13"
+                android:contentDescription="@string/description_tablet"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -290,7 +301,8 @@
                 android:layout_below="@id/tablet"
                 android:layout_toRightOf="@id/snueve"
                 android:text="@string/s9"
-                android:onClick="onClickShowAlert14"/>
+                android:onClick="onClickShowAlert14"
+                android:contentDescription="@string/description_s9"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -309,7 +321,8 @@
                 android:layout_below="@id/snueve"
                 android:layout_toRightOf="@id/audi"
                 android:text="@string/audi"
-                android:onClick="onClickShowAlert15"/>
+                android:onClick="onClickShowAlert15"
+                android:contentDescription="@string/description_headphones"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -328,7 +341,8 @@
                 android:layout_below="@id/audi"
                 android:layout_toRightOf="@id/ps"
                 android:text="@string/ps"
-                android:onClick="onClickShowAlert16"/>
+                android:onClick="onClickShowAlert16"
+                android:contentDescription="@string/description_ps4"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -347,7 +361,8 @@
                 android:layout_below="@id/ps"
                 android:layout_toRightOf="@id/xbox"
                 android:text="@string/xbox"
-                android:onClick="onClickShowAlert17"/>
+                android:onClick="onClickShowAlert17"
+                android:contentDescription="@string/description_xbox"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -366,7 +381,8 @@
                 android:layout_below="@id/xbox"
                 android:layout_toRightOf="@id/corneta"
                 android:text="@string/corneta"
-                android:onClick="onClickShowAlert18"/>
+                android:onClick="onClickShowAlert18"
+                android:contentDescription="@string/description_corneta"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -385,7 +401,8 @@
                 android:layout_below="@id/corneta"
                 android:layout_toRightOf="@id/mouse"
                 android:text="@string/mouse"
-                android:onClick="onClickShowAlert19"/>
+                android:onClick="onClickShowAlert19"
+                android:contentDescription="@string/description_mouse"/>
 
             <ImageView
                 android:layout_width="100dp"
@@ -404,9 +421,9 @@
                 android:layout_below="@id/mouse"
                 android:layout_toRightOf="@id/power"
                 android:text="@string/power"
-                android:onClick="onClickShowAlert20"/>
+                android:onClick="onClickShowAlert20"
+                android:contentDescription="@string/description_power"/>
 
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

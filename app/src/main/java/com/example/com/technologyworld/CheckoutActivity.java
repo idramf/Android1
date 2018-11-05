@@ -1,4 +1,4 @@
-package com.example.com.shoppinglist;
+package com.example.com.technologyworld;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

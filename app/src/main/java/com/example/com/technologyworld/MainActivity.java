@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    
+
     public boolean LISTA_LLENA = false;
     public List<Integer> textViewId = new ArrayList<>();
     public List<Integer> imageViewId = new ArrayList<>();
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Inicia el activity, llama a los metodos para llenar las listas de los id's, si estos ya
      * se ecuentran llenos entonces se pasa a la siguente actividad (recepcion de la informacion
-     * a traves de un intent. 
+     * a traves de un intent.
      * @param savedInstanceState
      */
     @Override
@@ -206,4 +206,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openCheckout(View view) {
+        Intent intent = new Intent(this, CheckoutActivity.class);
+        startActivity(intent);
+    }
 }
